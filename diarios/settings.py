@@ -11,5 +11,6 @@ BOT_NAME = 'diarios'
 SPIDER_MODULES = ['diarios.spiders']
 NEWSPIDER_MODULE = 'diarios.spiders'
 
-# Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'diarios (+http://www.yourdomain.com)'
+DOWNLOAD_DELAY = 2
+
+USER_AGENT = 'diarios_pb crawler'
