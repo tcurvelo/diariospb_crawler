@@ -9,7 +9,7 @@ from scrapy.selector import Selector
 
 
 class DiarioPbSpider(CrawlSpider):
-    name = 'diario-pb'
+    name = 'diarios_pb'
     allowed_domains = ['paraiba.pb.gov.br']
     start_urls = ['http://www.paraiba.pb.gov.br/diario-oficial']
 
