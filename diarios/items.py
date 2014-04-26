@@ -5,7 +5,7 @@
 
 from scrapy.item import Item, Field
 
+
 class DiariosItem(Item):
-    # define the fields for your item here like:
-    # name = Field()
-    pass
+    title = Field()
+    url = Field()
