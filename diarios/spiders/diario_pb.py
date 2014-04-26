@@ -54,11 +54,11 @@ class DiarioPbSpider(CrawlSpider):
         links = sel.xpath('//*[@id="conteudo-interna"]/*/a')
 
         for link in links:
-            url = link.xpath('@href').extract()[0]
-            if url.endswith(".pdf"):
+            url = link.xpath('@href').extract()
+            if url[0].endswith(".pdf"):
                 yield DiariosItem(
                     title=link.xpath('text()').extract(),
                     url=url
                 )
             else:
-                yield Request(url, callback=self.parse_item)
+                yield Request(url[0], callback=self.parse_item)
